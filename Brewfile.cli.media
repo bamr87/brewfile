@@ -1,0 +1,7 @@
+cask_args appdir: '/Applications'
+
+brew 'cmus'
+brew 'mpd'
+brew 'mpv'
+brew 'ncmpcpp'
+brew 'vimpc'

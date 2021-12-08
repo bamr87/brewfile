@@ -1,0 +1,12 @@
+cask_args appdir: '/Applications'
+
+# eBooks
+cask 'calibre'
+
+# Players
+cask 'iina'
+cask 'kodi'
+cask 'vlc'
+
+# Encoders
+cask 'handbrake'

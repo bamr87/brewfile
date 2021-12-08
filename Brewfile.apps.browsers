@@ -1,0 +1,9 @@
+cask_args appdir: '/Applications'
+
+cask 'google-chrome'
+cask 'chromedriver'
+cask 'firefox'
+cask 'firefox-developer-edition'
+brew 'geckodriver'
+cask 'vivaldi'
+cask 'microsoft-edge'
