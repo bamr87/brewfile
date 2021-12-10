@@ -7,7 +7,7 @@ brew 'gdb'
 brew 'gcc'
 
 # Python
-brew 'python'
+brew 'python3'
 brew 'pipenv'
 brew 'pyenv'
 

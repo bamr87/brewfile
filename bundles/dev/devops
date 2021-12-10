@@ -26,3 +26,6 @@ brew 'helm'
 brew 'awscli'
 cask 'google-cloud-sdk'
 brew 'azure-cli'
+
+# Deploy
+brew 'gradle'

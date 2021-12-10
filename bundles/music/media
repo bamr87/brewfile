@@ -1,5 +1,9 @@
 cask_args appdir: '/Applications'
 
+# music
+cask 'musescore'
+cask 'sonic-pi'
+
 # eBooks
 cask 'calibre'
 

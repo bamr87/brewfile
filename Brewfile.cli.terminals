@@ -1,5 +1,0 @@
-cask_args appdir: '/Applications'
-
-cask 'alacritty'
-cask 'iterm2'
-cask 'kitty'

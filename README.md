@@ -1,54 +1,78 @@
-![brew](brew.png)
+---
+title: Homebrew
+collection: quickstart
+permalink: /quickstart/homebrew/
+sidebar:
+    nav: quickstart
+lastmod: '2021-12-09T16:52:17.090Z'
+---
+![brew](\brew.png)
 
 # Brewfile
 
 ## Installation
 
-```sh
+Git
+
+```bash
 cd ~
-git clone git@github.com:degete/brewfile.git ~/.brew
+git clone git@github.com:bamr87/hombrew.git ~/.brew
+```
+
+```bash
+gh repo clone bamr87/hombrew.git ~/.brew
+```
 
 # Install all packages in `Brewfile` (required taps and packages)
+
+```bash
+
 brew bundle
 
 # Selective packages by categories
 
 # Fonts
-brew bundle --file Brewfile.fonts
+
+brew bundle --file bundles/fonts
 
 # CLI
-brew bundle --file Brewfile.cli
-brew bundle --file Brewfile.cli.git
-brew bundle --file Brewfile.cli.terminals
-brew bundle --file Brewfile.cli.shells
-brew bundle --file Brewfile.cli.search
-brew bundle --file Brewfile.cli.editors
-brew bundle --file Brewfile.cli.media
-brew bundle --file Brewfile.cli.monitoring
-brew bundle --file Brewfile.cli.network
+
+brew bundle --file bundles/cli
+brew bundle --file bundles/cli.git
+brew bundle --file bundles/cli.terminals
+brew bundle --file bundles/cli.shells
+brew bundle --file bundles/cli.search
+brew bundle --file bundles/cli.editors
+brew bundle --file bundles/cli.media
+brew bundle --file bundles/cli.monitoring
+brew bundle --file bundles/cli.network
 
 # Development
-brew bundle --file Brewfile.dev.languages
-brew bundle --file Brewfile.dev.db
-brew bundle --file Brewfile.dev.ides
-brew bundle --file Brewfile.dev.devops
-brew bundle --file Brewfile.dev.ios
-brew bundle --file Brewfile.dev.android
-brew bundle --file Brewfile.dev.api
-brew bundle --file Brewfile.dev.forensic
-brew bundle --file Brewfile.dev.virtualization
+
+brew bundle --file bundles/dev.languages
+brew bundle --file bundles/dev.db
+brew bundle --file bundles/dev.ides
+brew bundle --file bundles/dev.devops
+brew bundle --file bundles/dev.ios
+brew bundle --file bundles/dev.android
+brew bundle --file bundles/dev.api
+brew bundle --file bundles/dev.forensic
+brew bundle --file bundles/dev.virtualization
 
 # Apps
-brew bundle --file Brewfile.apps.macos
-brew bundle --file Brewfile.apps.browsers
-brew bundle --file Brewfile.apps.design
-brew bundle --file Brewfile.apps.office
-brew bundle --file Brewfile.apps.sns
-brew bundle --file Brewfile.apps.git
-brew bundle --file Brewfile.apps.media
+
+brew bundle --file bundles/apps.macos
+brew bundle --file bundles/apps.browsers
+brew bundle --file bundles/apps.design
+brew bundle --file bundles/apps.office
+brew bundle --file bundles/apps.sns
+brew bundle --file bundles/apps.git
+brew bundle --file bundles/apps.media
 
 # Games
-brew bundle --file Brewfile.games
+
+brew bundle --file bundles/games
+
 ```
 
 ### Avoiding dependencies
@@ -61,13 +85,13 @@ In order to avoid to install some dependencies (`mas` needs to have a valid `App
 - HOMEBREW_BUNDLE_MAS_SKIP
 - HOMEBREW_BUNDLE_WHALEBREW_SKIP
 
-```sh
-HOMEBREW_BUNDLE_MAS_SKIP brew bundle --file Brewfile.apps
+```bash
+HOMEBREW_BUNDLE_MAS_SKIP brew bundle --file apps
 ```
 
 ## Packages dependencies
 
-```sh
+```bash
 # Requires graphviz (dot, fdp)
 brew install graphviz
 
@@ -78,6 +102,6 @@ open graph.png
 
 ### Upstream dependencies
 
-```sh
+```bash
 brew deps --installed | grep ':.*FORMULA' | awk -F':' '{print $1}'
 ```

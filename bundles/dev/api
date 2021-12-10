@@ -1,3 +1,4 @@
 cask_args appdir: '/Applications'
 
-cask 'fork'
+cask 'postman'
+# cask 'insomnia'
